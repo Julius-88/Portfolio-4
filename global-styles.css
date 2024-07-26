@@ -101,16 +101,6 @@ nav a:hover {
     }
 }
 
-@keyframes scroll-right {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
-
 /* Media Queries */
 @media (min-width: 768px) {
     .logo {
