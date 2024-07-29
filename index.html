@@ -13,7 +13,6 @@
         <img src="./img/removed-background.webp" class="logo" alt="JTA Logo">
         <nav>
             <ul>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#about_me">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
             </ul>
@@ -29,7 +28,7 @@
         <div class="introduction">
             <h1 class="animated-text">Julius Alamarvdashti</h1>
             <h2 class="animated-subtext">Fullstack Developer</h2>
-        </div>        
+        </div>
     </section>
     <div class="scrolling-text-container">
         <div class="scrolling-text-inner" style="--marquee-speed: 25s; --direction:scroll-left" role="marquee">
@@ -46,15 +45,47 @@
                 <div class="scrolling-text-item">MySQL</div>
                 <div class="scrolling-text-item">MongoDB</div>
                 <div class="scrolling-text-item">PostgreSQL</div>
+                <div class="scrolling-text-item">Git</div>
+                <div class="scrolling-text-item">Github</div>
+                <div class="scrolling-text-item">Figma</div>
             </div>
         </div>
     </div>
     </section>
     <section id="about_me">
-        <p>About Me</p>
+        <div class="about_me_text">
+            <h2>About Me</h2>
+            <p>
+                I’m a dedicated web developer who thrives on problem-solving and improving existing
+                solutions. My journey from sales to tech has been driven by a strong determination to overcome
+                challenges and continuously learn. I hold a degree in Front End Development from KYH and recently
+                graduated from the Full Stack Software Developer program at Code Institute.
+
+                When I'm not coding, I enjoy watching horror and thriller films with my family, gaming with friends, and
+                exploring new places. These activities keep me refreshed and inspired.
+
+                I'm eager to apply my skills in a supportive role where I can continue to grow and contribute to
+                meaningful projects. Let's connect and see how we can collaborate!
+            </p>
+        </div>
         <img src="./img/bild_5.webp" class="img_self" alt="Picture of Julius">
     </section>
-    <section id="projects">Projects</section>
+    <section id="projects">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./img/slide1.webp" alt="" class="disintegrate">
+                    <div class="slide-text">
+                        <p>This project is</p>
+                    </div>
+                </div>
+                <div class="slide"><img src="./img/slide2.webp" alt="" class="disintegrate"></div>
+                <div class="slide"><img src="./img/slide3.webp" alt="" class="disintegrate"></div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </section>
     <footer>Footer</footer>
     <script src="./script.js"></script>
 </body>
