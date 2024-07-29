@@ -48,12 +48,12 @@ nav a:hover {
 
 .card-group,
 .card {
-    aspect-ratio: 3 / 5;
+    aspect-ratio: 5 / 7;
 }
 
 .card-group,
 .big-card {
-    width: 20vmin;
+    width: 30vmin;
 }
 
 .card {
@@ -62,7 +62,7 @@ nav a:hover {
 }
 
 .big-card {
-    width: 20vmin;
+    width: 30vmin;
     border-radius: 1vmin;
 }
 
