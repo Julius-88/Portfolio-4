@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,6 +7,11 @@
     text-decoration: none;
     list-style: none;
     color: black;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background: linear-gradient(#A2D2FF, #FFC8DD, #FFAFCC, #CDB4DB, #A2D2FF);
 }
 
 /* Navbar */
@@ -42,7 +49,6 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(#A2D2FF, #FFC8DD);
     padding: 50px 0;
 }
 
@@ -148,7 +154,7 @@ nav a:hover {
     font-weight: normal;
     color: #333;
     opacity: 0;
-    animation: subtext-animation 2s ease-in-out forwards 2s; /* Delay the subtext animation */
+    animation: subtext-animation 2s ease-in-out forwards 2s;
 }
 
 @keyframes subtext-animation {
@@ -216,7 +222,7 @@ nav a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(#FFAFCC, #CDB4DB);
+    /* background-image: linear-gradient(#FFAFCC, #CDB4DB); */
 }
 
 .about_me_text h2 {
@@ -235,6 +241,15 @@ nav a:hover {
     height: auto;
     margin: 10px;
     box-shadow: 1em .4em 5px #bde0fe, -1em -.3em 5px #ffafcc;
+}
+
+.email {
+    text-align: center;
+}
+
+.email:hover {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
 }
 
 /* Projects */
@@ -320,6 +335,27 @@ button.next {
         transform: none;
         opacity: 1;
     }
+}
+
+.link-grp {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 30%;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.btn-link {
+    background-color: #cdb4db;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 2px ;
+    margin: 10px;
+}
+
+.btn-link:hover {
+    background-color: #ffafcc;
 }
 
 /* Media Queries */
