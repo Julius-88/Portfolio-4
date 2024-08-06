@@ -17,6 +17,24 @@ body {
     flex-direction: column;
 }
 
+.header-text {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(315deg, #707070, #FFFFFF, #707070);
+    background-size: 200% 100%;
+    animation: shimmer 15s infinite;
+    margin: 10px 0;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
 /* Navbar */
 
 .navbar {
@@ -223,7 +241,7 @@ nav a:hover {
 
 /* About Me */
 
-#about_me {
+.about_me_content {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -378,7 +396,7 @@ button.next {
         display: flex;
     }
 
-    #about_me {
+    .about_me_content {
         flex-direction: row;
     }
 
