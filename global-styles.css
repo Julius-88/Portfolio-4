@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
     padding: 0;
@@ -7,14 +7,18 @@
     text-decoration: none;
     list-style: none;
     color: black;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
-    background: linear-gradient(#A2D2FF, #FFC8DD, #FFAFCC, #CDB4DB, #A2D2FF);
+    background: linear-gradient(135deg #A2D2FF 0%, #CDB4DB 100%);
     height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+hr {
+   margin: 10px;
 }
 
 .header-text {
@@ -30,9 +34,18 @@ body {
     0% {
         background-position: -200% 0;
     }
+
     100% {
         background-position: 200% 0;
     }
+}
+
+header,
+.hero_section,
+.about_me_content,
+.slider,
+footer {
+    width: 100%;
 }
 
 /* Navbar */
@@ -42,7 +55,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .logo {
@@ -66,6 +79,7 @@ nav a:hover {
 /* Hero Section */
 
 .hero_section {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,6 +212,10 @@ nav a:hover {
     background-color: #eff5ff;
     border-radius: 4px;
     overflow: hidden;
+    margin: 20px 0;
+    /* Added margin for spacing */
+    flex-shrink: 0;
+    /* Prevent shrinking */
 }
 
 /* Inner container styles */
@@ -207,6 +225,7 @@ nav a:hover {
     font-size: 16px;
     font-weight: 600;
     padding: 8px 0;
+    overflow: hidden;
 }
 
 /* Text styles */
@@ -242,6 +261,7 @@ nav a:hover {
 /* About Me */
 
 .about_me_content {
+    flex: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -386,6 +406,22 @@ button.next {
     background-color: #ffafcc;
 }
 
+/* Footer */
+
+footer {
+    flex-shrink: 0;
+}
+
+.footer-content {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-icons a {
+    margin-right: 20px;
+}
+
 /* Media Queries */
 @media (min-width: 768px) {
     .logo {
@@ -413,11 +449,11 @@ button.next {
     .slide {
         flex-direction: row;
     }
-    
+
     .slide img {
         width: 50%;
     }
-    
+
     .slide-text {
         width: 50%;
         font-size: large;
@@ -437,7 +473,7 @@ button.next {
     .about_me_text {
         font-size: medium;
     }
-   
+
 }
 
 @media (min-width: 1440px) {
