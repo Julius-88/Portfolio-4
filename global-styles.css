@@ -329,6 +329,11 @@ footer {
     h3 {
         text-align: center;
     }
+
+    .skill-names {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
 }
 
 @media (min-width: 1024px) {
