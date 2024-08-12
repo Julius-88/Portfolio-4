@@ -171,6 +171,23 @@ em:hover {
     background-color: #A2D2FF;
 }
 
+.skill-names {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.skill-names img {
+    width: 100px;
+    height: 100px;
+}
+
+figcaption {
+    text-align: center;
+}
+
 /* About Me */
 
 .about_me_content {
