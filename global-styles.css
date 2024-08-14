@@ -14,6 +14,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #e0fbfc;
 }
 
 hr {
@@ -33,12 +34,31 @@ hr {
     font-family: "Playfair Display", serif;
 }
 
-em:hover {
-    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+.email {
+    --s: 0.1em;
+    /* the thickness of the line */
+    --c: #3d5a80;
+    /* the color */
+    color: transparent;
+    padding-bottom: var(--s);
+    background:
+        linear-gradient(90deg, var(--c) 50%, #000 0) calc(100% - var(--_p, 0%))/200% 100%,
+        linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) var(--s) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.5s;
+    cursor: auto;
+    text-align: center;
+}
+
+.email:hover {
+    --_p: 100%;
 }
 
 .head-text {
     font-family: "Montserrat", sans-serif;
+    padding: 7px;
+    text-align: center;
 }
 
 /* Hero Section */
@@ -57,18 +77,14 @@ em:hover {
     aspect-ratio: 5 / 7;
 }
 
-.card-group,
-.big-card {
-    width: 25vmin;
-}
-
 .card {
     position: absolute;
     transition: transform 800ms cubic-bezier(.05, .43, .25, .95);
 }
 
+.card-group,
 .big-card {
-    width: 25vmin;
+    width: 28vmin;
     border-radius: 1vmin;
 }
 
@@ -167,7 +183,7 @@ em:hover {
 /* Skills */
 
 .skills {
-    background-color: #A2D2FF;
+    background-color: #98c1d9;
 }
 
 .skill-names {
@@ -184,11 +200,10 @@ em:hover {
 }
 
 figure {
-    box-shadow: -5px 5px 0px 0px;
-}
-
-figure:hover {
-    box-shadow: -5px 5px 5px 10px;
+    -webkit-box-shadow: -5px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -5px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -5px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    margin: 10px;
 }
 
 figcaption {
@@ -223,19 +238,10 @@ figcaption {
     box-shadow: 1em .4em 5px #bde0fe, -1em -.3em 5px #ffafcc;
 }
 
-.email {
-    text-align: center;
-}
-
-.email:hover {
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-}
-
 /* Projects */
 
 #projects {
-    background-color: #A2D2FF;
+    background-color: #98c1d9;
 }
 
 .project {
@@ -263,15 +269,44 @@ figcaption {
 }
 
 .btn-link {
-    background-color: #cdb4db;
-    padding: 10px;
-    border-radius: 2px;
-    box-shadow: 0 0 10px 2px;
+    --c: #3d5a80;
+    /* the color */
+    --b: .1em;
+    /* border length*/
+    --d: 20px;
+    /* the cube depth */
+
+    --_s: calc(var(--d) + var(--b));
+
+    color: var(--c);
+    border: solid #0000;
+    border-width: var(--b) var(--b) var(--_s) var(--_s);
+    background:
+        conic-gradient(at left var(--d) bottom var(--d),
+            #0000 90deg, rgb(255 255 255 /0.3) 0 225deg, rgb(255 255 255 /0.6) 0) border-box,
+        conic-gradient(at left var(--_s) bottom var(--_s),
+            #0000 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+    transform: translate(calc(var(--d)/-1), var(--d));
+    clip-path:
+        polygon(var(--d) 0%,
+            var(--d) 0%,
+            100% 0%,
+            100% calc(100% - var(--d)),
+            100% calc(100% - var(--d)),
+            var(--d) calc(100% - var(--d)));
+    transition: 0.5s;
     margin: 10px;
 }
 
 .btn-link:hover {
-    background-color: #ffafcc;
+    transform: translate(0, 0);
+    clip-path:
+        polygon(0% var(--d),
+            var(--d) 0%,
+            100% 0%,
+            100% calc(100% - var(--d)),
+            calc(100% - var(--d)) 100%,
+            0% 100%);
 }
 
 /* Footer */
@@ -299,11 +334,6 @@ footer {
 .footer-icons a {
     margin: 10px;
 }
-
-.email {
-    margin: 10px;
-}
-
 
 /* Media Queries */
 @media (min-width: 768px) {

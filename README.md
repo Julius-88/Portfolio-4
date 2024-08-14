@@ -9,3 +9,5 @@
 [pixian ai - to remove background color from images](https://pixian.ai/)
 
 [cloudconvert - to convert images to webp](https://cloudconvert.com/png-to-webp)
+
+[Hover effect in 3D](https://css-tricks.com/css-hover-effects-background-masks-3d/)
