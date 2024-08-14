@@ -59,7 +59,7 @@ em:hover {
 
 .card-group,
 .big-card {
-    width: 30vmin;
+    width: 25vmin;
 }
 
 .card {
@@ -68,14 +68,8 @@ em:hover {
 }
 
 .big-card {
-    width: 30vmin;
+    width: 25vmin;
     border-radius: 1vmin;
-}
-
-.little-card {
-    width: 6vmin;
-    border-radius: 2vmin;
-    transform: translate(100%, 100%);
 }
 
 .big-card:nth-child(4) {
@@ -110,7 +104,7 @@ em:hover {
     background-image: url("./img/bild_1.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translate(-150%, 16%) rotate(-24deg);
+    transform: translate(-100%, 16%) rotate(-24deg);
 }
 
 .card-group:hover>.big-card:nth-child(2) {
@@ -118,7 +112,7 @@ em:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    transform: translate(-50%, 0%) rotate(-8deg);
+    transform: translate(-30%, 0%) rotate(-8deg);
 }
 
 .card-group:hover>.big-card:nth-child(3) {
@@ -132,7 +126,7 @@ em:hover {
     background-image: url("./img/bild_6.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translate(150%, 16%) rotate(24deg);
+    transform: translate(100%, 16%) rotate(24deg);
 }
 
 .introduction {
@@ -187,6 +181,14 @@ em:hover {
 .skill-names img {
     width: 100px;
     height: 100px;
+}
+
+figure {
+    box-shadow: -5px 5px 0px 0px;
+}
+
+figure:hover {
+    box-shadow: -5px 5px 5px 10px;
 }
 
 figcaption {
