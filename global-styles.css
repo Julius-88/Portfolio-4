@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@1,600&family=Playfair+Display:ital,wght@1,500&display=swap');
 
 * {
     padding: 0;
@@ -7,7 +7,7 @@
     text-decoration: none;
     list-style: none;
     color: black;
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 body {
@@ -30,10 +30,15 @@ hr {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: "Playfair Display", serif;
 }
 
 em:hover {
     background: linear-gradient(90deg, #ff6ec4, #7873f5);
+}
+
+.head-text {
+    font-family: "Montserrat", sans-serif;
 }
 
 /* Hero Section */
@@ -231,6 +236,21 @@ figcaption {
     background-color: #A2D2FF;
 }
 
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project div {
+    padding: 10px;
+    text-align: center;
+}
+
 .link-grp {
     display: flex;
     flex-direction: column;
@@ -334,6 +354,10 @@ footer {
         display: grid;
         grid-template-columns: auto auto auto;
     }
+
+    .project img {
+        padding: 20px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -349,6 +373,10 @@ footer {
         font-size: x-large;
     }
 
+    .project div {
+        font-size: large;
+    }
+
 }
 
 @media (min-width: 1440px) {
@@ -362,6 +390,10 @@ footer {
 
     .footer-content {
         font-size: xx-large;
+    }
+
+    .project div {
+        font-size: x-large;
     }
 }
 
@@ -380,6 +412,10 @@ footer {
     }
 
     .footer-content {
+        font-size: xxx-large;
+    }
+
+    .project div {
         font-size: xxx-large;
     }
 }
