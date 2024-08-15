@@ -32,6 +32,8 @@ hr {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Playfair Display", serif;
+    letter-spacing: 3px;
+    text-shadow: 5px 15px 3px #7873f5;
 }
 
 .email {
@@ -55,10 +57,15 @@ hr {
     --_p: 100%;
 }
 
+.social-media {
+    cursor: pointer;
+}
+
 .head-text {
     font-family: "Montserrat", sans-serif;
     padding: 7px;
     text-align: center;
+    letter-spacing: 2px;
 }
 
 /* Hero Section */
