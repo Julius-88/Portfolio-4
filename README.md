@@ -11,3 +11,5 @@
 [cloudconvert - to convert images to webp](https://cloudconvert.com/png-to-webp)
 
 [Hover effect in 3D](https://css-tricks.com/css-hover-effects-background-masks-3d/)
+
+[Carousel](https://dev.to/shubhamtiwari909/auto-sliding-carousel-with-javascript-5h47)
