@@ -15,6 +15,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #e0fbfc;
+    min-width: 300px;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 hr {
@@ -70,86 +73,35 @@ hr {
 
 /* Hero Section */
 
-.hero_section {
-    flex: 1;
+.carousel_items {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 0;
+    overflow: hidden;
 }
 
-.card-group,
-.card {
-    aspect-ratio: 5 / 7;
-}
-
-.card {
-    position: absolute;
-    transition: transform 800ms cubic-bezier(.05, .43, .25, .95);
-}
-
-.card-group,
-.big-card {
-    width: 28vmin;
-    border-radius: 1vmin;
-}
-
-.big-card:nth-child(4) {
-    background-image: url("./img/bild_1.webp");
+.carousel_item {
+    position: relative;
+    min-width: 100%;
+    height: 300px;
+    transition: all 1s linear;
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translateX(-10%) rotate(-1deg);
+    background-attachment: fixed;
 }
 
-.big-card:nth-child(2) {
-    background-image: url("./img/bild_2.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: rotate(2deg);
+.item1 {
+    background-image: url("./img/bild_mountain.webp");
 }
 
-.big-card:nth-child(3) {
-    background-image: url("./img/bild_3.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: translateX(-6%) rotate(-3deg);
+.item2 {
+    background-image: url("./img/bild_hiking.webp");
 }
 
-.big-card:nth-child(1) {
-    background-image: url("./img/bild_4.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: translate(-10%, 3%) rotate(5deg);
+.item3 {
+    background-image: url("./img/bild_diving.webp");
 }
 
-.card-group:hover>.big-card:nth-child(4) {
-    background-image: url("./img/bild_1.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: translate(-100%, 16%) rotate(-24deg);
-}
-
-.card-group:hover>.big-card:nth-child(2) {
-    background-image: url("./img/bild_2.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    transform: translate(-30%, 0%) rotate(-8deg);
-}
-
-.card-group:hover>.big-card:nth-child(3) {
-    background-image: url("./img/bild_3.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: translate(50%, 0%) rotate(8deg);
-}
-
-.card-group:hover>.big-card:nth-child(1) {
-    background-image: url("./img/bild_6.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: translate(100%, 16%) rotate(24deg);
+.item4 {
+    background-image: url("./img/bild_bodyflight.webp");
 }
 
 .introduction {
@@ -397,6 +349,10 @@ footer {
     .project img {
         padding: 20px;
     }
+
+    .carousel_item {
+        height: 600px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -416,6 +372,10 @@ footer {
         font-size: large;
     }
 
+    .carousel_item {
+        height: 900px;
+    }
+
 }
 
 @media (min-width: 1440px) {
@@ -433,6 +393,10 @@ footer {
 
     .project div {
         font-size: x-large;
+    }
+
+    .carousel_item {
+        height: 1200px;
     }
 }
 
@@ -456,5 +420,9 @@ footer {
 
     .project div {
         font-size: xxx-large;
+    }
+
+    .carousel_item {
+        height: 2000px;
     }
 }
