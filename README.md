@@ -5,6 +5,7 @@
 [Image cards](https://www.youtube.com/watch?v=6TYkDy54q4E&t=307s)
 
 [iconscout - Skill images](https://iconscout.com/)
+[Devicon - Skill Images](https://devicon.dev/)
 
 [pixian ai - to remove background color from images](https://pixian.ai/)
 
